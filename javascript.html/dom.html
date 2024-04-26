@@ -1,0 +1,38 @@
+<!-- document object model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="sample">Lorem ipsum dolor sit amet.</h1>
+    <h2 class="test">Lorem ipsum dolor sit.</h2>
+    <h2 class="test block">Lorem ipsum dolor sit.</h2>
+    <h2 class="test def">Lorem ipsum dolor sit.</h2>
+    <h2 class="test">Lorem ipsum dolor sit.</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+    <script>
+        var a=document.getElementById('sample');
+        a.style.background="pink";
+        a.style.fontSize="30 px";
+        a.style.fontStyle="italic";
+        a.style.fontWeight="bold";
+        var b=document.getElementsByClassName('test');
+        b[0].style.background=" violet";
+        b[1].style.background=" yellow";
+        b[2].style.background=" red";
+        b[3].style.background=" orange";
+        var c=document.getElementsByTagName('h3');
+        c[0].fontStyle="italic";
+        c[1].style.background=" brown";
+        c[2].style.background=" blue";
+
+    </script>
+
+</body>
+</html>

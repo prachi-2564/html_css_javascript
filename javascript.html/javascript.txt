@@ -1,0 +1,3495 @@
+                                                                                Javascript
+
+Javascript is one of the 3 languages all web developers must learn:
+
+1. HTML---> to define the content of web pages.
+2. CSS------> to specify the layout of web pages.
+3.JAVASCRIPT--> to program the behaviour of web pages.
+
+---> javascript is a dynamic computer programming language.It is lightweight and most commonly used as a part
+     of web pages,whose implementions allow client-side script to interact with the user and make dynamic with 
+     object-oriented capabilities.
+
+
+ADVANTAGES OF JAVASCRIPT:
+
+1) less server interaction
+2) immediate feedback to the visitors
+3) increased interactivity
+4)richer interfaces------ such as drag and drop components
+
+Javascript identifiers are case sensitive
+the variables lastname and Lastname are two different variables.
+
+Syntax:
+<script>
+
+Javascript code
+</script>
+
+The script tag has two attributes
+1) language
+2) type
+
+
+example:
+
+1)
+
+<html>
+<head>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+var x;
+x=5;
+</script>
+</body>
+</html>
+   
+INTERNAL JAVASCRIPT
+2)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+    var greet = "Hello World!";
+    document.write(greet);      // Prints: Hello World!
+    </script>
+</body>
+</html>
+
+
+External javascript:
+
+// A function to display a message
+function sayHello() {
+    alert("Hello World!");
+}
+
+// Call function on click of the button
+document.getElementById("myBtn").onclick = sayHello;
+
+
+program:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Including External JavaScript File</title>        
+</head>
+<body>    
+    <button type="button" id="myBtn">Click Me</button>
+    <script src="js/hello.js"></script>
+</body>
+</html>
+
+
+INLINE JAVASCRIPT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inlining JavaScript</title>        
+</head>
+<body>    
+    <button onclick="alert('Hello World!')">Click Me</button>
+</body>
+</html>
+
+Examples :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example of JavaScript Statements</title>
+</head>
+<body>
+    <script>
+    var x = 5;
+    var y = 10;
+    var sum = x + y;
+    document.write(sum); // Prints variable value
+    </script>
+</body>
+</html>
+
+COMMENTS IN JAVASCRIPT:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Multi-line Comment</title>
+</head>
+<body>
+    <script>
+    /* This is my first program 
+    in JavaScript */
+    document.write("Hello World!");
+    </script>
+</body>
+</html>
+
+What is Variable?
+
+Variables are fundamental to all programming languages. Variables are used to store data,
+ like string of text, numbers, etc. The data or value stored in the variables can be set, 
+updated, and retrieved whenever needed. In general, variables are symbolic names for values.
+
+You can create a variable with the var keyword, whereas the assignment operator (=) is used to assign 
+value to a variable, like this: var varName = value;
+
+EXAMPLE:
+
+1)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Variables in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var name = "Peter Parker";
+    var age = 21;
+    var isMarried = false;
+    
+    // Printing variable values
+    document.write(name + "<br>");
+    document.write(age + "<br>");
+    document.write(isMarried);
+    </script>
+</body>
+</html>
+
+2)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Declaring Variables in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Declaring Variable
+    var userName;
+     
+    // Assigning value
+    userName = "Clark Kent";
+    
+    // Printing variable values
+    document.write(userName);
+    </script>
+</body>
+</html>
+
+3)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Declaring Multiple Variables in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Declaring multiple Variables
+    var name = "Peter Parker", age = 21, isMarried = false;
+    
+    // Printing variable values
+    document.write(name + "<br>");
+    document.write(age + "<br>");
+    document.write(isMarried);
+    </script>
+</body>
+</html>
+
+THE LET AND CONST KEYWORD:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Declaring Variables with let and const Keywords in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Declaring variables
+    let name = "Harry Potter";
+    let age = 11;
+    let isStudent = true;
+    
+    // Printing variable values
+    document.write(name + "<br>");
+    document.write(age + "<br>");
+    document.write(isStudent + "<br>");
+    
+    // Declaring constant
+    const PI = 3.14;
+    
+    // Printing constant value
+    document.write(PI); // 3.14
+    
+    // Trying to reassign
+    PI = 10; // error
+    </script>
+</body>
+</html>                            
+
+
+Naming Conventions for JavaScript Variables:
+
+These are the following rules for naming a JavaScript variable:
+
+A variable name must start with a letter, underscore (_), or dollar sign ($).
+A variable name cannot start with a number.
+A variable name can only contain alpha-numeric characters (A-z, 0-9) and underscores.
+A variable name cannot contain spaces.
+A variable name cannot be a JavaScript keyword or a JavaScript reserved word.
+
+Displaying Output in Alert Dialog Boxes
+
+You can also use alert dialog boxes to display the message or output data to the user. 
+An alert dialog box is created using the alert() method. Here's is an example:
+
+example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing into an Alert Dialog Box with JavaScript</title>
+</head>
+<body>
+    <script>
+    // Displaying a simple text message
+    alert("Hello World!"); // Outputs: Hello World!
+    
+    // Displaying a variable value 
+    var x = 10;
+    var y = 20;
+    var sum = x + y;
+    alert(sum); // Outputs: 30
+    </script>
+</body>
+</html>
+
+example:1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing into an Browser Window with JavaScript</title>
+</head>
+<body>
+    <script>
+    // Printing a simple text message
+    document.write("Hello World!"); // Prints: Hello World!
+    
+    // Printing a variable value 
+    var x = 10;
+    var y = 20;
+    var sum = x + y;
+    document.write(sum); // Prints: 30
+    </script>
+</body>
+</html>
+
+
+example 2:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Problem with JavaScript Document.write() Method</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph of text.</p>
+    
+    <button type="button" onclick="document.write('Hello World!')">Click Me</button>
+</body>
+</html>
+
+Inserting Output Inside an HTML Element:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing into an HTML Element with JavaScript</title>
+</head>
+<body>
+    <p id="greet"></p>
+    <p id="result"></p>
+    
+    <script>
+    // Writing text string inside an element
+    document.getElementById("greet").innerHTML = "Hello World!";
+   
+    // Writing a variable value inside an element
+    var x = 10;
+    var y = 20;
+    var sum = x + y;
+    document.getElementById("result").innerHTML = sum;
+    </script>
+</body>
+</html>
+
+
+                                                              JavaScript Data Types:
+
+There are six basic data types in JavaScript which can be divided into three main categories:
+ primitive (or primary), composite (or reference), and special data types.
+ String, Number, and Boolean are primitive data types.
+ Object, Array, and Function (which are all types of objects) are composite data types. 
+Whereas Undefined and Null are special data types. 
+
+
+                                                               The String Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript String Data Type</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var a = 'Hi there!';  // using single quotes
+    var b = "Hi there!";  // using double quotes
+    
+    // Printing variable values
+    document.write(a + "<br>");
+    document.write(b);
+    </script>
+</body>
+</html>
+
+example 2:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Including Quotes inside the JavaScript String</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var a = "Let's have a cup of coffee.";
+    var b = 'He said "Hello" and left.';
+    var c = 'We\'ll never give up.';
+    
+    // Printing variable values
+    document.write(a + "<br>");
+    document.write(b + "<br>");
+    document.write(c);
+    </script>
+</body>
+</html>
+
+                                                              The Number Data Type:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Number Data Type</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var a = 25;
+    var b = 80.5;
+    var c = 4.25e+6;
+    var d = 4.25e-6;
+    
+    // Printing variable values
+    document.write(a + "<br>");
+    document.write(b + "<br>");
+    document.write(c + "<br>");
+    document.write(d);
+    </script>
+</body>
+</html>
+
+example 2:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Infinity</title>
+</head>
+<body>
+    <script>
+    document.write(16 / 0);
+    document.write("<br>");
+    document.write(-16 / 0);
+    document.write("<br>");
+    document.write(16 / -0);
+    </script>
+</body>
+</html>
+
+                                                               The Boolean Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Boolean Data Type</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var isReading = true;   // yes, I'm reading
+    var isSleeping = false; // no, I'm not sleeping
+    
+    // Printing variable values
+    document.write(isReading + "<br>");
+    document.write(isSleeping);
+    </script>
+</body>
+</html>
+
+example 2:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Comparisons</title>
+</head>
+<body>
+    <script>
+    var a = 2, b = 5, c = 10;
+ 
+    document.write(b > a) // Output: true
+    document.write("<br>");
+    document.write(b > c) // Output: false
+    </script>
+</body>
+</html>
+
+                                                            The Undefined Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Undefined Data Type</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var a;
+    var b = "Hello World!"
+    
+    // Printing variable values
+    document.write(a + "<br>");
+    document.write(b);
+    </script>
+</body>
+</html>
+
+                                                          The Null Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Null Data Type</title>
+</head>
+<body>
+    <script>
+    var a = null;
+    document.write(a + "<br>"); // Print: null
+    
+    var b = "Hello World!"
+    document.write(b + "<br>"); // Print: Hello World!
+    
+    b = null;
+    document.write(b) // Print: null
+    </script>
+</body>
+</html>
+
+                                                        The Array Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Array Data Type</title>
+</head>
+<body>
+    <script>
+    // Creating arrays
+    var colors = ["Red", "Yellow", "Green", "Orange"];
+    var cities = ["London", "Paris", "New York"];
+    
+    // Printing array values
+    document.write(colors[0] + "<br>");   // Output: Red
+    document.write(cities[2]);   // Output: New York
+    </script>
+</body>
+</html>
+
+                                                        The Function Data Type:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Function Data Type</title>
+</head>
+<body>
+    <script>
+    var greeting = function(){ 
+        return "Hello World!"; 
+    }
+     
+    // Check the type of greeting variable
+    document.write(typeof greeting) // Output: function
+    document.write("<br>");
+    document.write(greeting());     // Output: Hello World!
+    </script>
+</body>
+</html>
+
+
+                                             The typeof Operator:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript typeof Operator</title>
+</head>
+<body>
+    <script>
+    // Numbers
+    document.write(typeof 15 + "<br>");  // Prints: "number"
+    document.write(typeof 42.7 + "<br>");  // Prints: "number"
+    document.write(typeof 2.5e-4 + "<br>");  // Prints: "number"
+    document.write(typeof Infinity + "<br>");  // Prints: "number"
+    document.write(typeof NaN + "<br>");  // Prints: "number". Despite being "Not-A-Number"
+     
+    // Strings
+    document.write(typeof '' + "<br>");  // Prints: "string"
+    document.write(typeof 'hello' + "<br>");  // Prints: "string"
+    document.write(typeof '12' + "<br>");  // Prints: "string". Number within quotes is document.write(typeof string
+     
+    // Booleans
+    document.write(typeof true + "<br>");  // Prints: "boolean"
+    document.write(typeof false + "<br>");  // Prints: "boolean"
+     
+    // Undefined
+    document.write(typeof undefined + "<br>");  // Prints: "undefined"
+    document.write(typeof undeclaredVariable + "<br>"); // Prints: "undefined"
+     
+    // Null
+    document.write(typeof Null + "<br>");  // Prints: "object"
+     
+    // Objects
+    document.write(typeof {name: "John", age: 18} + "<br>");  // Prints: "object"
+     
+    // Arrays
+    document.write(typeof [1, 2, 4] + "<br>");  // Prints: "object"
+     
+    // Functions
+    document.write(typeof function(){});  // Prints: "function"
+    </script>
+</body>
+</html>
+
+
+                                                      JavaScript Operators:
+
+JavaScript Arithmetic Operators
+
+The arithmetic operators are used to perform common arithmetical operations, such as addition, subtraction, multiplication etc. Here's a complete list of JavaScript's arithmetic operators:
+
+Operator	Description	Example	Result
++	Addition	                  x + y         Sum of x and y
+-	Subtraction	x - y	Difference of x and y.
+*	Multiplication	x * y	Product of x and y.
+/	Division	                 x / y	Quotient of x and y
+%	Modulus	                 x % y	Remainder of x divided by y
+
+example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Arithmetic Operators</title>
+</head>
+<body>
+    <script>
+    var x = 10;
+    var y = 4;
+    document.write(x + y); // Prints: 14
+    document.write("<br>");
+    
+    document.write(x - y); // Prints: 6
+    document.write("<br>");
+    
+    document.write(x * y); // Prints: 40
+    document.write("<br>");
+    
+    document.write(x / y); // Prints: 2.5
+    document.write("<br>");
+    
+    document.write(x % y); // Prints: 2
+    </script>
+</body>
+</html>
+
+
+JavaScript Assignment Operators
+
+The assignment operators are used to assign values to variables.
+
+Operator	Description	            Example	Is The Same As
+=	Assign	                               x = y	x = y
++=	Add and assign	            x += y	x = x + y
+-=	Subtract and assign	             x -= y	x = x - y
+*=	Multiply and assign	              x *= y	x = x * y
+/=	Divide and assign quotient     x /= y	x = x / y
+%=	Divide and assign modulus     x %= y	x = x % y
+
+
+JavaScript String Operators
+
+There are two operators which can also used be for strings.
+
+Operator	Description	                 Example	                     Result
++	Concatenation	                 str1 + str2          	Concatenation of str1 and str2
++=	Concatenation assignment	str1 += str2	Appends the str2 to the str1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript String Operators</title>
+</head>
+<body>
+    <script>
+    var str1 = "Hello";
+    var str2 = " World!";
+    
+    document.write(str1 + str2 + "<br>"); // Outputs: Hello World!
+     
+    str1 += str2;
+    document.write(str1); // Outputs: Hello World!
+    </script>
+</body>
+</html>
+
+
+
+                                        JavaScript Incrementing and Decrementing Operators
+  
+The increment/decrement operators are used to increment/decrement a variable's value.
+
+Operator	Name	                           Effect
+++x	Pre-increment	Increments x by one, then returns x
+x++	Post-increment	Returns x, then increments x by one
+--x	Pre-decrement	Decrements x by one, then returns x
+x--	Post-decrement	Returns x, then decrements x by one
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Incrementing and Decrementing Operators</title>
+</head>
+<body>
+    <script>
+    var x; // Declaring Variable
+ 
+    x = 10;
+    document.write(++x); // Prints: 11
+    document.write("<p>" + x + "</p>");   // Prints: 11
+     
+    x = 10;
+    document.write(x++); // Prints: 10
+    document.write("<p>" + x + "</p>");   // Prints: 11
+     
+    x = 10;
+    document.write(--x); // Prints: 9
+    document.write("<p>" + x + "</p>");   // Prints: 9
+     
+    x = 10;
+    document.write(x--); // Prints: 10
+    document.write("<p>" + x + "</p>");   // Prints: 9
+    </script>
+</body>
+</html>
+
+
+                                                  JavaScript Logical Operators:
+
+The logical operators are typically used to combine conditional statements.
+
+Operator	Name	Example	     Result
+&&	And	x && y	True if both x and y are true
+||	Or	x || y	True if either x or y is true
+!	Not	!x	True if x is not true
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Logical Operators</title>
+</head>
+<body>
+    <script>
+    var year = 2018;
+ 
+    // Leap years are divisible by 400 or by 4 but not 100
+    if((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))){
+        document.write(year + " is a leap year.");
+    } else{
+        document.write(year + " is not a leap year.");
+    }
+    </script>
+</body>
+</html>
+
+
+                                                         JavaScript Comparison Operators:
+
+The comparison operators are used to compare two values in a Boolean fashion.
+
+Operator	Name	                                      Example	Result
+==	Equal	                                        x == y	   True if x is equal to y
+===	Identical	                                      x === y	   True if x is equal to y, and they are of the same type
+!=	Not equal	                                       x != y	   True if x is not equal to y
+!==	Not identical                                  x !== y	   True if x is not equal to y, or they are not of the same type
+<	Less than	                                        x < y	   True if x is less than y
+>	Greater than                                     x > y	   True if x is greater than y
+>=	Greater than or equal to	     x >= y	   True if x is greater than or equal to y
+<=	Less than or equal to	    x <= y	   True if x is less than or equal to y
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Comparison Operators</title>
+</head>
+<body>
+    <script>
+    var x = 25;
+    var y = 35;
+    var z = "25";
+     
+    document.write(x == z);  // Prints: true
+    document.write("<br>");
+    
+    document.write(x === z); // Prints: false
+    document.write("<br>");
+    
+    document.write(x != y);  // Prints: true
+    document.write("<br>");
+    
+    document.write(x !== z); // Prints: true
+    document.write("<br>");
+    
+    document.write(x < y);   // Prints: true
+    document.write("<br>");
+    
+    document.write(x > y);   // Prints: false
+    document.write("<br>");
+    
+    document.write(x <= y);  // Prints: true
+    document.write("<br>");
+    
+    document.write(x >= y);  // Prints: false
+    </script>
+</body>
+</html>
+
+
+                                                                      JAVASCRIPT EVENTS:
+
+An event is something that happens when user interact with the web page, such as when he clicked a link 
+or button, entered text into an input box or textarea, made selection in a select box, pressed key on the keyboard,
+ moved the mouse pointer, submits a form, etc. In some cases, the Browser itself can trigger the events, 
+such as the page load and unload events.
+
+When an event occur, you can use a JavaScript event handler (or an event listener) to detect them and 
+perform specific task or set of tasks. By convention, the names for event handlers always begin with the word "on",
+ so an event handler for the click event is called onclick, similarly an event handler for the load event is
+ called onload, event handler for the blur event is called onblur, and so on.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Attaching Event Handlers Inline</title>
+</head>
+<body>
+    <button type="button" onclick="alert('Hello World!')">Click Me</button>
+</body>
+</html>
+
+example 2:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Attaching Event Handlers in External File</title>
+</head>
+<body>
+    <button type="button" id="myBtn">Click Me</button>
+    <script>
+        function sayHello(){
+            alert('Hello World!');
+        }
+        document.getElementById("myBtn").onclick = sayHello;
+    </script>
+</body>
+</html>
+
+
+                                                                              The Click Event (onclick):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Click Event</title>
+</head>
+<body>
+    <button type="button" onclick="alert('You have clicked a button!');">Click Me</button>
+    <a href="#" onclick="alert('You have clicked a link!');">Click Me</a>
+</body>
+</html>
+
+                                                                The Contextmenu Event (oncontextmenu):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Contextmenu Event</title>
+</head>
+<body>
+    <button type="button" oncontextmenu="alert('You have right-clicked a button!');">Right Click on Me</button>
+    <a href="#" oncontextmenu="alert('You have right-clicked a link!');">Right Click on Me</a>
+</body>
+</html>
+
+                                                           The Mouseover Event (onmouseover):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Mouseover Event</title>
+</head>
+<body>
+    <button type="button" onmouseover="alert('You have placed mouse pointer over a button!');">
+               Place Mouse Over Me</button>
+    <a href="#" onmouseover="alert('You have placed mouse pointer over a link!');">Place Mouse Over Me</a>
+</body>
+</html>
+
+                                                    The Mouseout Event (onmouseout):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Mouseout Event</title>
+</head>
+<body>
+    <button type="button" onmouseout="alert('You have moved out of the button!');">
+               Place Mouse Inside Me and Move Out</button>
+    <a href="#" onmouseout="alert('You have moved out of the link!');">Place Mouse Inside Me and Move Out</a>
+</body>
+</html>
+
+
+                                                                     Keyboard Events:
+
+A keyboard event is fired when the user press or release a key on the keyboard. Here're some most important 
+keyboard events and their event handler.
+
+                                               The Keydown Event (onkeydown):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Keydown Event</title>
+</head>
+<body>
+    <input type="text" onkeydown="alert('You have pressed a key inside text input!')">
+    <hr>
+    <textarea cols="30" onkeydown="alert('You have pressed a key inside textarea!')"></textarea>
+</body>
+</html>
+
+                                                         The Keyup Event (onkeyup):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Keyup Event</title>
+</head>
+<body>
+    <input type="text" onkeyup="alert('You have released a key inside text input!')">
+    <hr>
+    <textarea cols="30" onkeyup="alert('You have released a key inside textarea!')"></textarea>
+</body>
+</html>
+
+
+                                            The Keypress Event (onkeypress):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Keypress Event</title>
+</head>
+<body>
+    <input type="text" onkeypress="alert('You have pressed a key inside text input!')">
+    <hr>
+    <textarea cols="30" onkeypress="alert('You have pressed a key inside textarea!')"></textarea>
+</body>
+</html>
+
+
+                                                               Form Events:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Focus Event</title>
+</head>
+<body>
+    <script>
+        function highlightInput(elm){
+            elm.style.background = "yellow";
+        }    
+    </script>
+    <input type="text" onfocus="highlightInput(this)">
+    <button type="button">Button</button>
+</body>
+</html>
+
+
+                                                        The Blur Event (onblur):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Blur Event</title>
+</head>
+<body>
+    <input type="text" onblur="alert('Text input loses focus!')">
+    <button type="button">Submit</button>
+	</body>
+</html>
+
+
+                                                     The Change Event (onchange):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Change Event</title>
+</head>
+<body>
+    <select onchange="alert('You have changed the selection!');">
+        <option>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+</body>
+</html>
+
+
+                                                 The Submit Event (onsubmit):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Submit Event</title>
+</head>
+<body>
+    <form action="/examples/html/action.php" method="post" onsubmit="alert('Form data will be submitted to the server!');">
+        <label>First Name:</label>
+        <input type="text" name="first-name" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+                                                  Document/Window Events:
+
+                                                 The Load Event (onload):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Load Event</title>
+</head>
+<body onload="window.alert('Page is loaded successfully!');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+</body>
+</html>
+ 
+                                              The Resize Event (onresize):
+                                           
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Resize Event</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        function displayWindowSize(){
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("result").innerHTML = txt;
+        }
+        window.onresize = displayWindowSize;
+    </script>
+</body>
+</html>
+
+
+                                                           JavaScript Strings:
+
+A string is a sequence of letters, numbers, special characters and arithmetic values or combination of all.
+Strings can be created by enclosing the string literal (i.e. string characters) either 
+within single quotes (') or double quotes ("), as shown in the example below:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Strings in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var myString = 'Hello World!'; // Single quoted string
+    var myString = "Hello World!"; // Double quoted string
+    
+    // Printing variable values
+    document.write(myString + "<br>");
+    document.write(myString);
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Strings in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var myString = 'Hello World!'; // Single quoted string
+    var myString = "Hello World!"; // Double quoted string
+    
+    // Printing variable values
+    document.write(myString + "<br>");
+    document.write(myString);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Escaping Quotes inside JavaScript Strings</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var str1 = 'it\'s okay';
+    var str2 = "He said \"Goodbye\"";
+    var str3 = 'She replied \'Calm down, please\'';
+    
+    // Printing variable values
+    document.write(str1 + "<br>");
+    document.write(str2 + "<br>");
+    document.write(str3);
+    </script>
+</body>
+</html>
+
+
+                                           JavaScript Escape Sequences:
+
+
+Escape sequences are also useful for situations where you want to use characters that can't be typed 
+using a keyboard. Here are some other most commonly used escape sequences.
+
+\n is replaced by the newline character
+\t is replaced by the tab character
+\r is replaced by the carriage-return character
+\b is replaced by the backspace character
+\\ is replaced by a single backslash (\)
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Escape Sequences</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var str1 = "The quick brown fox \n jumps over the lazy dog.";
+    document.write("<pre>" + str1 + "</pre>"); // Create line break
+     
+    var str2 = "C:\Users\Downloads";
+    document.write(str2 + "<br>"); // Prints C:UsersDownloads
+     
+    var str3 = "C:\\Users\\Downloads";
+    document.write(str3); // Prints C:\Users\Downloads
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Get String Length in JavaScript</title>
+</head>
+<body>
+    <script>
+    var str1 = "This is a paragraph of text.";
+    document.write(str1.length + "<br>"); // Prints 28
+     
+    var str2 = "This is a \n paragraph of text.";
+    document.write(str2.length); // Prints 30, because \n is only one character
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Find the Position of Substring within a String</title>
+</head>
+<body>
+    <script>
+    var str = "If the facts don't fit the theory, change the facts.";
+    var pos = str.indexOf("facts");
+    document.write(pos); // 0utputs: 7
+    </script>
+</body>
+</html>
+
+ 
+                                                    JavaScript Numbers:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Numbers</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var x = 2;  // integer number
+    var y = 3.14;  // floating-point number
+    var z = 0xff;  // hexadecimal number
+    
+    // Printing variable values
+    document.write(x + "<br>");
+    document.write(y + "<br>");
+    document.write(z);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Adding Numbers and Strings</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var x = 10;
+    var y = 20;
+    var z = "30";
+    
+    // Adding a number with a number, the result will be sum of numbers
+    document.write(x + y); // 30
+    document.write("<br>");
+    
+    // Adding a string with a string, the result will be string concatenation
+    document.write(z + z); // '3030'
+    document.write("<br>");
+    
+    // Adding a number with a string, the result will be string concatenation
+    document.write(x + z); // '1030'
+    document.write("<br>");
+    
+    // Adding a string with a number, the result will be string concatenation
+    document.write(z + x); // '3010'
+    document.write("<br>");
+    
+    // Adding strings and numbers, the result will be string concatenation
+    document.write("The result is: " + x + y); // 'The result is: 1020'
+    document.write("<br>");
+    
+    // Adding numbers and strings, calculation performed from left to right
+    document.write(x + y + z); // 'The result is: 3030'
+    </script>
+</body>
+</html>
+
+
+
+                                                        JavaScript If…Else Statements:
+
+Like many other programming languages, JavaScript also allows you to write code that perform 
+different actions based on the results of a logical or comparative test conditions at run time.
+ This means, you can create test conditions in the form of expressions that evaluates to either true
+ or false and based on these results you can perform certain actions.
+
+There are several conditional statements in JavaScript that you can use to make decisions:
+
+The if statement
+The if...else statement
+The if...else if....else statement
+The switch...case statement
+
+
+                                                           The if Statement:
+
+The if statement is used to execute a block of code only if the specified condition evaluates to true. 
+This is the simplest JavaScript's conditional statements and can be written like:
+
+if(condition) {
+    // Code to be executed
+}
+
+
+                                                      The if...else Statement:
+
+You can enhance the decision making capabilities of your JavaScript program by providing an alternative 
+choice through adding an else statement to the if statement.
+
+The if...else statement allows you to execute one block of code if the specified condition is evaluates to true 
+and another block of code if it is evaluates to false. It can be written, like this:
+
+if(condition) {
+    // Code to be executed if condition is true
+} else {
+    // Code to be executed if condition is false
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript If-Else Statement</title>
+</head>
+<body>
+    <script>
+    var now = new Date();
+    var dayOfWeek = now.getDay(); // Sunday - Saturday : 0 - 6
+    
+    if(dayOfWeek == 5) {
+        document.write("Have a nice weekend!");
+    } else {
+        document.write("Have a nice day!");
+    }
+    </script>
+</body>
+</html>
+
+
+                                         The if...else if...else Statement:
+
+
+The if...else if...else a special statement that is used to combine multiple if...else statements.
+
+if(condition1) {
+    // Code to be executed if condition1 is true
+} else if(condition2) {
+    // Code to be executed if the condition1 is false and condition2 is true
+} else {
+    // Code to be executed if both condition1 and condition2 are false
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Multiple If Else Statement</title>
+</head>
+<body>
+    <script>
+    var now = new Date();
+    var dayOfWeek = now.getDay(); // Sunday - Saturday : 0 - 6
+    
+    if(dayOfWeek == 5) {
+        document.write("Have a nice weekend!");
+    } else if(dayOfWeek == 0) {
+        document.write("Have a nice Sunday!");
+    } else {
+        document.write("Have a nice day!");
+    }
+    </script>
+</body>
+</html>
+
+
+                                       JavaScript Switch...Case Statements:
+
+The switch..case statement is an alternative to the if...else if...else statement, which does almost the same thing.
+ The switch...case statement tests a variable or expression against a series of values until it finds a match,
+ and then executes the block of code corresponding to that match. It's syntax is:
+
+switch(x){
+    case value1:
+        // Code to be executed if x === value1
+        break;
+    case value2:
+        // Code to be executed if x === value2
+        break;
+    ...
+    default:
+        // Code to be executed if x is different from all values
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Switch Case Statement</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+	
+    switch(d.getDay()) {
+        case 0:
+            document.write("Today is Sunday.");
+            break;
+        case 1:
+            document.write("Today is Monday.");
+            break;
+        case 2:
+            document.write("Today is Tuesday.");
+            break;
+        case 3:
+            document.write("Today is Wednesday.");
+            break;
+        case 4:
+            document.write("Today is Thursday.");
+            break;
+        case 5:
+            document.write("Today is Friday.");
+            break;
+        case 6:
+            document.write("Today is Saturday.");
+            break;   
+        default:
+            document.write("No information available for that day.");
+            break;
+    }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Switch Case Statement with Default Clause on Top</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+
+	switch(d.getDay()) {
+		default: 
+			document.write("Looking forward to the weekend.");
+			break;
+		case 6:
+			document.write("Today is Saturday.");
+			break; 
+		case 0:
+			document.write("Today is Sunday.");
+	}
+    </script>
+</body>
+</html>
+
+
+                                                     Multiple Cases Sharing Same Action:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Combine Multiple Cases in a Switch Case Statement</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+
+	switch(d.getDay()) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			document.write("It is a weekday.");
+			break; 
+		case 0:
+		case 6:
+			document.write("It is a weekend day.");
+			break;
+		default: 
+			document.write("Enjoy every day of your life.");
+	}
+    </script>
+</body>
+</html>
+
+
+                                                        JavaScript Arrays:
+
+What is an Array
+
+
+Arrays are complex variables that allow us to store
+ more than one value or a group of values under a single variable name. 
+JavaScript arrays can store any valid value, including strings, numbers, objects, functions, 
+and even other arrays, thus making it possible to create more complex data structures such
+ as an array of objects or an array of arrays.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Storing Single Values</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var color1 = "Red";
+    var color2 = "Green";
+    var color3 = "Blue";
+    
+    // Printing variable values
+    document.write(color1 + "<br>");
+    document.write(color2 + "<br>");
+    document.write(color3);
+    </script>
+</body>
+</html>
+
+
+                                                             Creating an Array:
+
+
+The simplest way to create an array in JavaScript is enclosing a comma-separated list of values in square brackets
+ ([]), as shown in the following syntax:
+
+var myArray = [element0, element1, ..., elementN];
+Array can also be created using the Array() constructor as shown in the following syntax.
+ However, for the sake of simplicity previous syntax is recommended.
+
+var myArray = new Array(element0, element1, ..., elementN);
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Arrays in JavaScript</title>
+</head>
+<body>
+    <script>
+    // Creating variables
+    var colors = ["Red", "Green", "Blue"]; 
+    var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+    var cities = ["London", "Paris", "New York"];
+    var person = ["John", "Wick", 32];
+    
+    // Printing variable values
+    document.write(colors + "<br>");
+    document.write(fruits + "<br>");
+    document.write(cities + "<br>");
+    document.write(person);
+    </script>
+</body>
+</html>
+
+
+                                                                Accessing the Elements of an Array:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Access Individual Elements of an Array</title>
+</head>
+<body>
+    <script>
+    var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+ 
+    document.write(fruits[0] + "<br>"); // Prints: Apple
+    document.write(fruits[1] + "<br>"); // Prints: Banana
+    document.write(fruits[2] + "<br>"); // Prints: Mango
+    document.write(fruits[fruits.length - 1]); // Prints: Papaya
+    </script>
+</body>
+</html>
+
+                                             Getting the Length of an Array:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get the Length of an Array</title>
+</head>
+<body>
+    <script>
+    var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+    document.write(fruits.length); // 0utputs: 5
+    </script>
+</body>
+</html>
+
+
+                                                        Merging Two or More Arrays:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Merge Two Arrays</title>
+</head>
+<body>
+    <script>
+    var pets = ["Cat", "Dog", "Parrot"];
+    var wilds = ["Tiger", "Wolf", "Zebra"];
+     
+    // Creating new array by combining pets and wilds arrays
+    var animals = pets.concat(wilds); 
+    document.write(animals); // Prints: Cat,Dog,Parrot,Tiger,Wolf,Zebra
+    </script>
+</body>
+</html>
+
+                                                                     Searching Through an Array:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Search an Array for a Specific Value</title>
+</head>
+<body>
+    <script>
+    var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+ 
+    document.write(fruits.indexOf("Apple") + "<br>"); // Prints: 0
+    document.write(fruits.indexOf("Banana") + "<br>"); // Prints: 1
+    document.write(fruits.indexOf("Pineapple")); // Prints: -1
+    </script>
+</body>
+</html>
+
+                                                  JavaScript Sorting Arrays:
+
+                         Sorting an Array
+
+Sorting is a common task when working with arrays. It would be used, for instance, if you want
+ to display the city or county names in alphabetical order.
+
+The JavaScript Array object has a built-in method sort() for sorting array elements in alphabetical order.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Sort an Array Alphabetically</title>
+</head>
+<body>
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Papaya", "Mango"];
+    var sorted = fruits.sort();
+    
+    document.write(fruits + "<br>"); // Outputs: Apple,Banana,Mango,Orange,Papaya
+    document.write(sorted); // Outputs: Apple,Banana,Mango,Orange,Papaya
+    </script>
+</body>
+</html>
+
+                                             Reversing an Array:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Reverse the Order of an Array</title>
+</head>
+<body>
+    <script>
+    var counts = ["one", "two", "three", "four", "five"];
+    var reversed = counts.reverse(); 
+    
+    document.write(counts + "<br>"); // Outputs: five,four,three,two,one
+    document.write(reversed); // Output: five,four,three,two,one
+    </script>
+</body>
+</html>
+
+                                                                       JavaScript Loops:
+
+Different Types of Loops in JavaScript
+
+Loops are used to execute the same block of code again and again, as long as a certain condition is met. 
+The basic idea behind a loop is to automate the repetitive tasks within a program to save the time and effort.
+ JavaScript now supports five different types of loops:
+
+while — loops through a block of code as long as the condition specified evaluates to true.
+
+do…while — loops through a block of code once; then the condition is evaluated. If the condition is true,
+ the statement is repeated as long as the specified condition is true.
+
+for — loops through a block of code until the counter reaches a specified number.
+
+for…in — loops through the properties of an object.
+
+for…of — loops over iterable objects such as arrays, strings, etc.
+
+
+The while Loop
+ 
+This is the simplest looping statement provided by JavaScript.
+
+The while loop loops through a block of code as long as the specified condition evaluates to true.
+ As soon as the condition fails, the loop is stopped. The generic syntax of the while loop is:
+
+while(condition) {
+    // Code to be executed
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript While Loop</title>
+</head>
+<body>
+    <script>
+    var i = 1;
+    while(i <= 5) {    
+        document.write("<p>The number is " + i + "</p>");
+        i++;
+    }
+    </script>
+</body>
+</html>
+
+
+The do...while Loop
+ 
+The do-while loop is a variant of the while loop, which evaluates the condition at the end of each loop iteration.
+ With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition
+ is true, the statement is repeated as long as the specified condition evaluated to is true.
+ The generic syntax of the do-while loop is:
+
+do {
+    // Code to be executed
+}
+while(condition);<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Do-While Loop</title>
+</head>
+<body>
+    <script>
+    var i = 1;
+    do {
+        document.write("<p>The number is " + i + "</p>");
+        i++;
+    }
+    while(i <= 5);
+    </script>
+</body>
+</html>
+
+
+The for Loop
+
+The for loop repeats a block of code as long as a certain condition is met. It is typically used to 
+execute a block of code for certain number of times. Its syntax is:
+
+for(initialization; condition; increment) {
+    // Code to be executed
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript For Loop</title>
+</head>
+<body>
+    <script>
+    for(var i=1; i<=5; i++) {
+        document.write("<p>The number is " + i + "</p>");
+    }
+    </script>
+</body>
+</html>
+
+
+The for...in Loop
+
+The for-in loop is a special type of a loop that iterates over the properties of an object, or the elements 
+of an array. The generic syntax of the for-in loop is:
+
+for(variable in object) {
+    // Code to be executed
+}
+The loop counter i.e. variable in the for-in loop is a string, not a number. It contains the name of 
+current property or the index of the current array element.
+
+
+
+
+                                                JavaScript Functions:
+
+What is Function?
+
+A function is a group of statements that perform specific tasks and can be kept and maintained separately
+ form main program. Functions provide a way to create reusable code packages which are more portable 
+and easier to debug. Here are some advantages of using functions:
+
+Functions reduces the repetition of code within a program — Function allows you to extract commonly used 
+
+block of code into a single component. Now you can perform the same task by calling this function wherever 
+you want within your script without having to copy and paste the same block of code again and again.
+
+Functions makes the code much easier to maintain — Since a function created once can be used many times
+, so any changes made inside a function automatically implemented at all the places without touching 
+the several files.
+
+Functions makes it easier to eliminate the errors — When the program is subdivided into functions, if any
+ error occur you know exactly what function causing the error and where to find it. Therefore, 
+fixing errors becomes much easier.
+
+
+                                                Defining and Calling a Function
+
+
+The declaration of a function start with the function keyword, followed by the name of the function you 
+want to create, followed by parentheses i.e. () and finally place your function's code between curly brackets {}.
+ Here's the basic syntax for declaring a function:
+
+function functionName() {
+    // Code to be executed
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Define and Call a Function</title>
+</head>
+<body>
+    <script>
+    // Defining function
+    function sayHello() {
+        document.write("Hello, welcome to this website!");
+    }
+     
+    // Calling function
+    sayHello(); // Prints: Hello, welcome to this website!
+    </script>
+</body>
+</html>  
+
+
+                                                 Adding Parameters to Functions:
+
+Parameters are set on the first line of the function inside the set of parentheses, like this:
+
+function functionName(parameter1, parameter2, parameter3) {
+    // Code to be executed
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Add Parameters to a Function</title>
+</head>
+<body>
+    <script>
+    // Defining function
+    function displaySum(num1, num2) {
+        var total = num1 + num2;
+        document.write(total);
+    }
+     
+    // Calling function
+    displaySum(6, 20); // Prints: 26
+    document.write("<br>");
+    displaySum(-5, 17); // Prints: 12
+    </script>
+</body>
+</html>  
+
+
+                                           Default Values for Function Parameters:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript ES6 Function with Default Parameter Values</title>
+</head>
+<body>
+    <script>
+    function sayHello(name='World'){
+        return `Hello ${name}!`;
+    }
+    
+    document.write(sayHello()); // Hello World!
+    document.write("<br>");
+    document.write(sayHello('John')); // Hello John!
+    </script>
+</body>
+</html>
+
+                                                  Returning Values from a Function:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Return a Value from a Function</title>
+</head>
+<body>
+    <script>
+    // Defining function
+    function getSum(num1, num2) {
+        var total = num1 + num2;
+        return total;
+    }
+     
+    // Displaying returned value
+    document.write(getSum(6, 20) + "<br>"); // Prints: 26
+    document.write(getSum(-5, 17)); // Prints: 12
+    </script>
+</body>
+</html>  
+
+                                                                         JavaScript Objects:
+
+                     Creating Objects:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Objects in JavaScript</title>
+</head>
+<body>
+    <script>
+    var person = {
+        name: "Peter",
+        age: 28,
+        gender: "Male",
+        displayName: function() {
+            alert(this.name);
+        }
+    };
+    
+    document.write(person.name + "<br>"); // Prints: Peter
+    document.write(person.age + "<br>"); // Prints: 28
+    document.write(person.gender); // Prints: Male
+    console.log(person); 
+    </script>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Set the Properties of an Object</title>
+</head>
+<body>
+    <script>
+    var person = {
+        name: "Peter",
+        age: 28,
+        gender: "Male"
+    };
+    
+    // Setting a new property
+    person.country = "United States";
+    document.write(person.country + "<br>"); // Prints: United States
+    
+    person["email"] = "peterparker@mail.com";
+    document.write(person.email + "<br>"); // Prints: peterparker@mail.com
+    
+    // Updating existing property
+    person.age = 30;
+    document.write(person.age + "<br>"); // Prints: 30
+    
+    person["name"] = "Peter Parker";
+    document.write(person.name); // Prints: Peter Parker
+    </script>
+</body>
+</html>
+
+
+                                                   JavaScript DOM Nodes:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Select an Element by its ID Attribute</title>
+</head>
+<body>
+    <p id="mark">This is a paragraph of text.</p>
+    <p>This is another paragraph of text.</p>
+
+    <script>
+    // Selecting element with id mark 
+    var match = document.getElementById("mark");
+     
+    // Highlighting element's background
+    match.style.background = "yellow";
+    </script>
+</body>
+</html>
+
+
+
+                                            Selecting Elements by Class Name:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Select Elements by Class Name</title>
+</head>
+<body>
+    <p class="test">This is a paragraph of text.</p>
+    <div class="block test">This is another paragraph of text.</div>
+    <p>This is one more paragraph of text.</p>
+    <hr>
+
+    <script>
+    // Selecting elements with class test
+    var matches = document.getElementsByClassName("test");
+        
+    // Displaying the selected elements count
+    document.write("Number of selected elements: " + matches.length);
+     
+    // Applying bold style to first element in selection
+    matches[0].style.fontWeight = "bold";
+        
+    // Applying italic style to last element in selection
+    matches[matches.length - 1].style.fontStyle = "italic";
+        
+    // Highlighting each element's background through loop
+    for(var elem in matches) {  
+        matches[elem].style.background = "yellow";
+    }
+    </script>
+</body>
+</html>
+
+                                                Selecting Elements by Tag Name:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Select Elements by Tag Name</title>
+</head>
+<body>
+    <p>This is a paragraph of text.</p>
+    <div class="test">This is another paragraph of text.</div>
+    <p>This is one more paragraph of text.</p>
+    <hr>
+
+    <script>
+    // Selecting all paragraph elements
+    var matches = document.getElementsByTagName("p");
+        
+    // Printing the number of selected paragraphs
+    document.write("Number of selected elements: " + matches.length);
+     
+    // Highlighting each paragraph's background through loop
+    for(var elem in matches) {  
+        matches[elem].style.background = "yellow";
+    }
+    </script>
+</body>
+</html>
+
+
+
+                                                  JavaScript Window:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Browser Viewport Dimensions</title>
+</head>
+<body>
+    <script>
+    function windowSize(){
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        alert("Width: " + w + ", " + "Height: " + h);
+    }
+    </script>
+     
+    <button type="button" onclick="windowSize();">Get Window Size</button>
+</body>
+</html>                            
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Width and Height of the Browser Viewport Excluding Scrollbars</title>
+    <style>
+        body{
+            min-height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    function windowSize(){
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        alert("Width: " + w + ", " + "Height: " + h);
+    }
+    </script>
+     
+    <button type="button" onclick="windowSize();">Get Window Size</button>
+</body>
+</html>
+
+
+                                                     JavaScript Window Screen:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Screen Resolution</title>
+</head>
+<body>
+    <script>
+    function getResolution() {
+        alert("Your screen is: " + screen.width + "x" + screen.height);
+    }
+    </script>
+     
+    <button type="button" onclick="getResolution();">Get Resolution</button>
+</body>
+</html>                            
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Screen Resolution</title>
+</head>
+<body>
+    <script>
+    function getResolution() {
+        alert("Your screen is: " + screen.width + "x" + screen.height);
+    }
+    </script>
+     
+    <button type="button" onclick="getResolution();">Get Resolution</button>
+</body>
+</html>                            
+
+
+                                                         Getting Screen Color Depth:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Color Depth of the Screen</title>
+</head>
+<body>
+    <script>
+    function getColorDepth() {
+        alert("Your screen color depth is: " + screen.colorDepth);
+    }
+    </script>
+     
+    <button type="button" onclick="getColorDepth();">Get Color Depth</button>
+</body>
+</html>                            
+
+
+                                                 Getting Screen Pixel Depth:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Pixel Depth of the Screen</title>
+</head>
+<body>
+    <script>
+    function getPixelDepth() {
+        alert("Your screen pixel depth is: " + screen.pixelDepth);
+    }
+    </script>
+     
+    <button type="button" onclick="getPixelDepth();">Get Pixel Depth</button>
+</body>
+</html>                            
+
+
+                                                       JavaScript Window Location:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Current URL</title>
+</head>
+<body>
+    <script>
+    function getURL() {
+        alert("The URL of this page is: " + window.location.href);
+    }
+    </script>
+     
+    <button type="button" onclick="getURL();">Get Page URL</button>
+</body>
+</html>                            
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Different Part of a URL</title>
+</head>
+<body>
+    <script>
+    // Prints complete URL
+    document.write(window.location.href + "<br>");
+      
+    // Prints protocol like http: or https:
+    document.write(window.location.protocol + "<br>"); 
+     
+    // Prints hostname with port like localhost or localhost:3000
+    document.write(window.location.host + "<br>");
+      
+    // Prints hostname like localhost or www.example.com
+    document.write(window.location.hostname + "<br>");
+     
+    // Prints port number like 3000
+    document.write(window.location.port + "<br>");
+      
+    // Prints pathname like /products/search.php
+    document.write(window.location.pathname + "<br>"); 
+     
+    // Prints query string like ?q=ipad
+    document.write(window.location.search + "<br>");
+     
+    // Prints fragment identifier like #featured
+    document.write(window.location.hash);
+    </script>
+    <p><strong>Note:</strong> If the URL does not contain a specific component (e.g., port number, and fragment identifier here), it will be set to ''.</p>
+</body>
+</html>                            
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Load another Resource from a URL</title>
+</head>
+<body>
+    <script>
+    function loadHomePage() {
+        window.location.assign("https://www.youtube.com");
+    }
+    </script>
+     
+    <button type="button" onclick="loadHomePage();">Load Home Page</button>
+   
+</body>
+</html>                            
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Reload a Page Dynamically</title>
+</head>
+<body>
+    <script>
+    function forceReload() {
+        window.location.reload(true);
+    }
+    </script>
+     
+    <button type="button" onclick="forceReload();">Reload Page</button>
+    
+</body>
+</html>
+
+
+                                               JavaScript Window History:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get History Length</title>
+</head>
+<body>
+    <script>
+    function getViews() {
+        alert("You've accessed " + history.length + " web pages in this session.");
+    }
+    </script>
+     
+    <button type="button" onclick="getViews();">Get Views Count</button>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get History Length</title>
+</head>
+<body>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+ 
+<button type="button" onclick="goBack();">Go Back</button>     
+    <button type="button" onclick="getViews();">Get Views Count</button>
+</body>
+</html>
+
+
+                                                             JavaScript Window Navigator:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect If Browser is Online or Offline</title>
+</head>
+<body>
+    <script>
+    function checkConnectionStatus() {
+        if(navigator.onLine) {
+            alert("Application is online.");
+        } else {
+            alert("Application is offline.");
+        }
+    }
+    </script>
+     
+    <button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+</body>
+</html>                                                        
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect Internet Connection Status</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        #status {
+            border: 2px solid;
+            padding: 15px 20px 15px 40px;
+            width: 160px;
+            margin: 0 auto;
+            border-radius: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+        #status.online {
+            color: green;
+        }        
+        #status.offline {
+            color: red;
+        }
+        #status.online::before, #status.offline::before {
+            width: 25px;
+            height: 25px;
+            content: "";
+            border-radius: 15px;
+            box-shadow: 0 0 8px;
+            position: absolute;
+            left: 20px;
+            top: 25px;
+        }
+        #status.online::before {
+            background: green;
+        }
+        #status.offline::before {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <script>    
+    var hint = document.getElementById("hint");
+    
+    // Defining function to update connection status
+    function updateConnectionStatus() {  
+        var status = document.getElementById("status");
+        if(navigator.onLine) {
+            status.innerHTML = "Online";
+            status.classList.add("online");
+            status.classList.remove("offline");                        
+        } else {
+            status.innerHTML = "Offline";
+            status.classList.add("offline");
+            status.classList.remove("online");            
+        }
+    }
+
+    // Attaching event handler for the load event
+    window.addEventListener("load", updateConnectionStatus);
+    
+    // Attaching event handler for the online event
+    window.addEventListener("online", function(e) {
+        updateConnectionStatus();
+        hint.innerHTML = "And we're back!";
+    });
+    
+    // Attaching event handler for the offline event
+    window.addEventListener("offline", function(e) {        
+        updateConnectionStatus();
+        hint.innerHTML = "Hey, it looks like you're offline.";
+    });
+    </script>
+    <div id="status"></div>    
+    <p>Toggle your internet connection on/off to see how it works.</p>
+    <p id="hint"></p>
+</body>
+</html>                                                        
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect Browser UI Language</title>
+</head>
+<body>
+    <script>
+    function checkLanguage() {
+        alert("Your browser's UI language is: " + navigator.language);
+    }
+    </script>
+     
+    <button type="button" onclick="checkLanguage();">Check Language</button>
+</body>
+</html>                                                        
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect Browser Name and Version</title>
+</head>
+<body>
+    <script>
+    function getBrowserInformation() {
+        var info = "\n App Name: " + navigator.appName;
+           info += "\n App Version: " + navigator.appVersion;
+           info += "\n App Code Name: " + navigator.appCodeName;
+           info += "\n User Agent: " + navigator.userAgent;
+           info += "\n Platform: " + navigator.platform;
+    
+        alert("Here're the information related to your browser: " + info);
+    }
+    </script>
+     
+    <button type="button" onclick="getBrowserInformation();">Get Browser Information</button>
+</body>
+</html>                                                        
+
+
+                                          JavaScript Dialog Boxes:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Alert Popup Box</title>
+</head>
+<body>
+    <script>
+    var message = "Hi there! Click OK to continue.";
+    alert(message);
+     
+    /* The following line won't execute until you dismiss previous alert */
+    alert("This is another alert box.");
+    </script>
+</body>
+</html>                            
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Alert Popup Box</title>
+</head>
+<body>
+    <script>
+    var message = "Hi there! Click OK to continue.";
+    alert(message);
+     
+    /* The following line won't execute until you dismiss previous alert */
+    alert("This is another alert box.");
+    </script>
+</body>
+</html>                            
+
+
+                          Creating Prompt Dialog Box:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Prompt Popup Box</title>
+</head>
+<body>
+    <script>
+    var name = prompt("What's your name?");
+ 
+    if(name.length > 0 && name != "null") {
+        document.write("Hi, " + name);
+    } else {
+        document.write("Anonymous!");
+    }
+    </script>
+</body>
+</html>                            
+
+
+
+                                            JavaScript Timers:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Execute a Function after Some Time</title>
+</head>
+<body>
+    <script>
+    function myFunction() {
+        alert('Hello World!');
+    }
+    </script>
+     
+    <button onclick="setTimeout(myFunction, 2000)">Click Me</button>
+  
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Execute a Function at Regular Intervals</title>
+</head>
+<body>
+    <script>
+    function showTime() {
+        var d = new Date();
+        document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+    }
+    setInterval(showTime, 1000);
+    </script>
+     
+    <p>The current time on your computer is: <span id="clock"></span></p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Cancel a Timer with clearTimeout() Method</title>
+</head>
+<body>
+    <script>
+    var timeoutID;
+     
+    function delayedAlert() {
+      timeoutID = setTimeout(showAlert, 2000);
+    }
+     
+    function showAlert() {
+      alert('This is a JavaScript alert box.');
+    }
+     
+    function clearAlert() {
+      clearTimeout(timeoutID);
+    }
+    </script>
+     
+    <button onclick="delayedAlert();">Show Alert After Two Seconds</button>
+     
+    <button onclick="clearAlert();">Cancel Alert Before It Display</button>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Cancel a Timer with clearInterval() Method</title>
+    <style>
+        #clock{
+            background: #000;
+            padding: 20px;
+            margin: 20px 0;
+            color: lime;
+            display: block;
+            font: 48px monospace;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var intervalID;
+     
+    function showTime() {
+        var d = new Date();
+        document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+    }
+     
+    function stopClock() {
+        clearInterval(intervalID);
+    }
+     
+    var intervalID = setInterval(showTime, 1000);
+    </script>
+     
+    <p>The current time on your computer is: <span id="clock"></span></p>
+     
+    <button onclick="stopClock();">Stop Clock</button>
+</body>
+</html>
+
+
+
+                                                           Javascript advanced:
+
+
+
+
+
+                                                       JavaScript Date and Time:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating a Date Object in JavaScript</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+    document.write(d);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Passing Parameters to the Date Object</title>
+</head>
+<body>
+    <script>
+    var d = new Date(2018,0,31,14,35,20,50);
+    document.write(d);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get the Current Date and Time</title>
+</head>
+<body>
+    <script>
+    var now = new Date();
+    document.write(now); // Display the current date and time
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Generate Date Strings</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+    document.write(d.toDateString() + "<br>"); // Display an abbreviated date string
+    document.write(d.toLocaleDateString() + "<br>"); // Display a localized date string
+    document.write(d.toISOString() + "<br>"); // Display the ISO standardized date string
+    document.write(d.toUTCString() + "<br>"); // Display a date string converted to UTC time
+    document.write(d.toString()); // Display the full date string with local time zone
+    </script>
+</body>
+</html>
+
+
+
+                                                   JavaScript Error Handling:
+
+Handling Errors
+Sometimes your JavaScript code does not run as smooth as expected, resulting in an error. 
+There are a number of reasons that may cause errors, for instance:
+
+A problem with network connection
+A user might have entered an invalid value in a form field
+Referncing objects or functions that do not exist
+Incorrect data being sent to or received from the web server
+A service that the application needs to access might be temporarily unavailable
+
+
+
+The try...catch Statement
+ 
+JavaScript provides the try-catch statement to trap the runtime errors, and handle them gracefully.
+
+Any code that might possibly throw an error should be placed in the try block of the statement,
+ and the code to handle the error is placed in the catch block, as shown here:
+
+
+try {
+    // Code that may cause an error
+} catch(error) {
+    // Action to be performed when an error occurs
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript try-catch Statement</title>
+</head>
+<body>
+    <script>
+    try {
+        var greet = "Hi, there!";
+        document.write(greet);
+        
+        // Trying to access a non-existent variable
+        document.write(welcome);
+        
+        // If error occurred following line won't execute
+        alert("All statements are executed successfully.");
+    } catch(error) {
+        // Handle the error
+      alert("Caught error: " + error.message);
+    }
+     
+    // Continue execution
+    document.write("<p>Hello World!</p>");
+    </script>
+</body>
+</html>
+
+
+
+The try...catch...finally Statement
+The try-catch statement can also have a finally clause. The code
+ inside the finally block will always execute, regardless of whether an error has occurred in the try block or not.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript try-catch-finally Statement</title>
+</head>
+<body>
+    <script>
+    // Assigning the value returned by the prompt dialog box to a variable
+    var num = prompt("Enter a positive integer between 0 to 100");
+    
+    // Storing the time when execution start
+    var start = Date.now();
+    
+    try {
+        if(num > 0 && num <= 100) {
+            alert(Math.pow(num, num)); // the base to the exponent power
+        } else {
+            throw new Error("An invalid value is entered!");
+        }
+    } catch(e) {
+        alert(e.message);
+    } finally {
+        // Displaying the time taken to execute the code
+        alert("Execution took: " + (Date.now() - start) + "ms");
+    }
+    </script>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript throw Statement</title>
+</head>
+<body>
+    <script>
+    var num = prompt("Please enter an integer value");
+    
+    try {
+        if(num == "" || num == null || !Number.isInteger(+num)) {
+            throw new Error("Invalid value!");
+        } else {
+            document.write("Correct value!");
+        }
+    } catch(e) {
+        document.write(e.message);
+    }
+    </script>
+</body>
+</html>
+
+
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Throwing an Error in JavaScript</title>
+</head>
+<body>
+    <script>
+    function squareRoot(number) {
+        // Throw error if number is negative
+        if(number < 0) {
+            throw new Error("Sorry, can't calculate square root of a negative number.");
+        } else {
+            return Math.sqrt(number);
+        }
+    }
+        
+    try {
+        squareRoot(16);
+        squareRoot(625);
+        squareRoot(-9);
+        squareRoot(100);
+        
+        // If error is thrown following line won't execute
+        alert("All calculations are performed successfully.");
+    } catch(e) {
+        // Handle the error
+        alert(e.message);
+    }
+    </script>
+</body>
+</html>
+
+
+                                 JavaScript Form Validation:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form validation</title>
+<link rel="stylesheet" href="/examples/css/form-style.css">
+<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var mobile = document.contactForm.mobile.value;
+    var country = document.contactForm.country.value;
+    var gender = document.contactForm.gender.value;
+    var hobbies = [];
+    var checkboxes = document.getElementsByName("hobbies[]");
+    for(var i=0; i < checkboxes.length; i++) {
+        if(checkboxes[i].checked) {
+            // Populate hobbies array with selected values
+            hobbies.push(checkboxes[i].value);
+        }
+    }
+    
+	// Defining error variables with a default value
+    var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "Please enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validate email address
+    if(email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "Please enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validate mobile number
+    if(mobile == "") {
+        printError("mobileErr", "Please enter your mobile number");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(mobile) === false) {
+            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+        } else{
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+    // Validate country
+    if(country == "Select") {
+        printError("countryErr", "Please select your country");
+    } else {
+        printError("countryErr", "");
+        countryErr = false;
+    }
+    
+    // Validate gender
+    if(gender == "") {
+        printError("genderErr", "Please select your gender");
+    } else {
+        printError("genderErr", "");
+        genderErr = false;
+    }
+    
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+                          "Full Name: " + name + "\n" +
+                          "Email Address: " + email + "\n" +
+                          "Mobile Number: " + mobile + "\n" +
+                          "Country: " + country + "\n" +
+                          "Gender: " + gender + "\n";
+        if(hobbies.length) {
+            dataPreview += "Hobbies: " + hobbies.join(", ");
+        }
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
+    }
+};
+</script>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" action="/examples/actions/confirmation.php" method="post">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+        </select>
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label>Gender</label>
+        <div class="form-inline">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label>Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form validation</title>
+<link rel="stylesheet" href="/examples/css/form-style.css">
+<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var mobile = document.contactForm.mobile.value;
+    var country = document.contactForm.country.value;
+    var gender = document.contactForm.gender.value;
+    var hobbies = [];
+    var checkboxes = document.getElementsByName("hobbies[]");
+    for(var i=0; i < checkboxes.length; i++) {
+        if(checkboxes[i].checked) {
+            // Populate hobbies array with selected values
+            hobbies.push(checkboxes[i].value);
+        }
+    }
+    
+	// Defining error variables with a default value
+    var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "Please enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validate email address
+    if(email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "Please enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validate mobile number
+    if(mobile == "") {
+        printError("mobileErr", "Please enter your mobile number");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(mobile) === false) {
+            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+        } else{
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+    // Validate country
+    if(country == "Select") {
+        printError("countryErr", "Please select your country");
+    } else {
+        printError("countryErr", "");
+        countryErr = false;
+    }
+    
+    // Validate gender
+    if(gender == "") {
+        printError("genderErr", "Please select your gender");
+    } else {
+        printError("genderErr", "");
+        genderErr = false;
+    }
+    
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+                          "Full Name: " + name + "\n" +
+                          "Email Address: " + email + "\n" +
+                          "Mobile Number: " + mobile + "\n" +
+                          "Country: " + country + "\n" +
+                          "Gender: " + gender + "\n";
+        if(hobbies.length) {
+            dataPreview += "Hobbies: " + hobbies.join(", ");
+        }
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
+    }
+};
+</script>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" action="/examples/actions/confirmation.php" method="post">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+        </select>
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label>Gender</label>
+        <div class="form-inline">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label>Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
+
+
+                                                  cookies:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Set and Get Cookies in JavaScript</title>
+</head>
+<body>
+    <script>
+    // A custom function to set cookies
+    function setCookie(name, value, daysToLive) {
+        // Encode value in order to escape semicolons, commas, and whitespace
+        var cookie = name + "=" + encodeURIComponent(value);
+    
+        if(typeof daysToLive === "number") {
+            /* Sets the max-age attribute so that the cookie expires
+            after the specified number of days */
+            cookie += "; max-age=" + (daysToLive*24*60*60);
+    
+            document.cookie = cookie;
+        }
+    }
+    
+    // A custom function to get cookies
+    function getCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+    
+        // Loop through the array elements
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+    
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if(name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+    
+        // Return null if not found
+        return null;
+    }
+    
+    // A custom function to check cookies
+    function checkCookie() {
+        // Get cookie using our custom function
+        var firstName = getCookie("firstName");
+    
+        if(firstName != null) {
+            alert("Welcome again, " + firstName);
+        } else {
+            firstName = prompt("Please enter your first name:");
+            if(firstName != "" && firstName != null) {
+                // Set cookie using our custom function
+                setCookie("firstName", firstName, 1);
+            }
+        }
+    }
+    
+    // Check the cookie on page load
+    window.onload = checkCookie;
+
+	// Uncomment the following line to delete this cookie
+	// setCookie("firstName", "", 0);
+    </script>
+    
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Set and Get Cookies in JavaScript</title>
+</head>
+<body>
+    <script>
+    // A custom function to set cookies
+    function setCookie(name, value, daysToLive) {
+        // Encode value in order to escape semicolons, commas, and whitespace
+        var cookie = name + "=" + encodeURIComponent(value);
+    
+        if(typeof daysToLive === "number") {
+            /* Sets the max-age attribute so that the cookie expires
+            after the specified number of days */
+            cookie += "; max-age=" + (daysToLive*24*60*60);
+    
+            document.cookie = cookie;
+        }
+    }
+    
+    // A custom function to get cookies
+    function getCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+    
+        // Loop through the array elements
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+    
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if(name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+    
+        // Return null if not found
+        return null;
+    }
+    
+    // A custom function to check cookies
+    function checkCookie() {
+        // Get cookie using our custom function
+        var firstName = getCookie("firstName");
+    
+        if(firstName != null) {
+            alert("Welcome again, " + firstName);
+        } else {
+            firstName = prompt("Please enter your first name:");
+            if(firstName != "" && firstName != null) {
+                // Set cookie using our custom function
+                setCookie("firstName", firstName, 1);
+            }
+        }
+    }
+    
+    // Check the cookie on page load
+    window.onload = checkCookie;
+
+	// Uncomment the following line to delete this cookie
+	// setCookie("firstName", "", 0);
+    </script>
+  
+</body>
+</html>
+
+
+                                                                  javascript ajax:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Ajax GET Demo</title>
+<script>
+function displayFullName() {
+    // Creating the XMLHttpRequest object
+    var request = new XMLHttpRequest();
+
+    // Instantiating the request object
+    request.open("GET", "/examples/php/greet.php?fname=John&lname=Clark");
+
+    // Defining event listener for readystatechange event
+    request.onreadystatechange = function() {
+        // Check if the request is compete and was successful
+        if(this.readyState === 4 && this.status === 200) {
+            // Inserting the response from server into an HTML element
+            document.getElementById("result").innerHTML = this.responseText;
+        }
+    };
+
+    // Sending the request to the server
+    request.send();
+}
+</script>
+</head>
+<body>
+    <div id="result">
+        <p>Content of the result DIV box will be replaced by the server response</p>
+    </div>
+    <button type="button" onclick="displayFullName()">Display Full Name</button>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Ajax POST Demo</title>
+<script>
+function postComment() {
+    // Creating the XMLHttpRequest object
+    var request = new XMLHttpRequest();
+    
+    // Instantiating the request object
+    request.open("POST", "/examples/php/confirmation.php");
+    
+    // Defining event listener for readystatechange event
+    request.onreadystatechange = function() {
+        // Check if the request is compete and was successful
+        if(this.readyState === 4 && this.status === 200) {
+            // Inserting the response from server into an HTML element
+            document.getElementById("result").innerHTML = this.responseText;
+        }
+    };
+    
+    // Retrieving the form data
+    var myForm = document.getElementById("myForm");
+    var formData = new FormData(myForm);
+
+    // Sending the request to the server
+    request.send(formData);
+}
+</script>
+</head>
+<body>
+    <form id="myForm">
+        <label>Name:</label>
+        <div><input type="text" name="name"></div>
+        <br>
+        <label>Comment:</label>
+        <div><textarea name="comment"></textarea></div>
+        <p><button type="button" onclick="postComment()">Post Comment</button></p>
+    </form>    
+    <div id="result">
+        <p>Content of the result DIV box will be replaced by the server response</p>
+    </div>    
+</body>
+</html>
+
+
+-------------------------------------------------------------------------END--------------------------------------------------------------------------------

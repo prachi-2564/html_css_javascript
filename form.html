@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <form >
+        <fieldset>
+            <legend><h1>PERSONAL DETAILS</h1></legend>
+            <label for="">First name</label>
+            <input type="text" placeholder="enter your first name" required><br><br>
+            <label for="">Middle name</label>
+            <input type="text" placeholder="enter your middle name" required><br><br>
+            <label for="">Last name</label>
+            <input type="text" placeholder="enter your last name" required><br><br>
+            <label for="">Email</label>
+            <input type="email" placeholder="enter email id" required><br><br>
+            <label for="">phone number</label>
+            <input type="number" placeholder="enter your phone number" required><br><br>
+            <label for="">D.O.B</label>
+            <input type="date"  required><br><br>
+            <label for="">Appointment</label>
+            <input type="datetime-local"  required><br><br>
+            <label for="">gender</label>
+            <input type="radio" value="male" name="gender"  required> male
+            <input type="radio" value="feamale" name="gender"  required> female <br><br>
+            <label for="">country</label>
+            <select name="country" id="country">
+                <option value="">INDIA</option>
+                <option value="">USA</option>
+                <option value="">UK</option>
+                <option value="">NEPAL</option>
+
+            </select>
+            <BR>
+            <BR>
+         <label for="">Address and Feedback</label>
+         <textarea name="address"></textarea><br><br>
+         <label for="">file upload</label>
+         <input type="file"multiple> <br><br> 
+         <!-- multiple sytax is used to upload multiple files without it only one file will be uploaded -->
+         <label for=""> password</label>
+         <input type="password"> <br><br>
+         <label for="">Hobbies</label>
+         <input type="checkbox">music
+         <input type="checkbox">dance
+         <input type="checkbox">reading
+         <input type="checkbox">cooking
+         <br><br>
+         <label for="">search</label>
+         <input type="search"><br><br>
+         <!-- extra topipcs -->
+         <label for="">month</label>
+         <input type="month"><br><br>
+         <label for="">week</label>
+         <input type="week"><br><br>
+         <label for="">range</label>
+         <input type="range"><br><br>
+         <label for="">URL</label>
+         <input type="url"><br><br>
+         <label for="">color</label>
+         <input type="color"><br><br>
+         <input type="submit" value="register">
+         <button type="button">sign in</button>
+
+        
+        </fieldset>
+    </form>
+    
+</body>
+</html>

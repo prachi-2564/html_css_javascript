@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=new Date();
+        var b=a.getDay();
+        switch(b)
+        {
+                default:
+                document.write("ERROR");
+                break;
+                case 0:
+                case 6:
+                document.write("IT IS WEEKEND");
+                break;
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5: 
+                document.write("IT'S A WEEKDAY");
+                break;
+        }
+    </script>
+</body>
+</html>

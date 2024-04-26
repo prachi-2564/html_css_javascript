@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Define and Call a Function</title>
+</head>
+<body>
+    <script>
+    // Defining function
+    function sayHello()
+     {
+        document.write("Hello, welcome to this website!");
+    }
+    sayHello(); // Prints: Hello, welcome to this website!
+    function C(name='World')
+    {
+        return `Hello ${name}!`;
+    }
+    document.write("<br>");
+    document.write(C()); // Hello World!
+    document.write("<br>");
+    document.write(C('John')); // Hello John!
+    function getSum(num1, num2)
+     {
+        var total = num1 + num2;
+        return total;
+    }
+    document.write("<br>");
+    // Displaying returned value
+    document.write(getSum(6, 20) + "<br>"); // Prints: 26
+    document.write(getSum(-5, 17)); // Prints: 12
+    </script>
+</body>
+</html>  
+
+
+                                          

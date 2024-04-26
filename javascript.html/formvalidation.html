@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+     body
+     {
+        font-size: 12px;
+        background:whitesmoke;
+        font-family: 'Times New Roman', Times, serif;
+     }
+     h2
+     {
+       text-align: center;
+       text-decoration: underline;
+     }
+     form
+     {
+       width: 300px;
+       
+       padding: 10px 20px 20px 10px;
+       background:pink;
+       border: 1px dashed #ccc;
+       margin: 50px auto 0;
+       border-radius: 5px;
+     }
+     label i{
+      color:white;
+      font-size:80%
+     }
+       input,select
+       {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+        .row
+        {
+            padding-bottom: 10px;
+        }
+        .form-inline{
+            border: 1px solid #ccc;
+            padding: 8px 10px 4px;
+            border-radius: 2px;
+        }
+        .form-inline label,.form-inline input
+        {
+            display: inline-block;
+            width: auto;
+            padding-right: 15px;
+        }
+        .error{
+            color:white;
+            font-size: 90%;
+        }
+        input[type="submit"]
+        {
+            font-size: 150%;
+            font-weight: 100;
+            background:whitesmoke;
+            border-color:white;
+            box-shadow: 0 3px 0 white;
+            color:black;
+            margin-top: 10px;
+            cursor: wait;
+        }
+        input[type="submit"]:hover{
+          background: white;
+        }
+
+     
+    </style>
+    <script>
+     function printError(elementId,hintMsg)
+     {
+        document.getElementById(elementId).innerHTML=hintMsg;
+
+     }
+     function validateForm()
+     {
+        var name=document.contactForm.name.value;
+        var email=document.contactForm.email.value;
+        var contact=document.contactForm.contact.value;
+        var country=document.contactForm.country.value;
+        var gender=document.contactForm.gender.value;
+     
+        var nameErr=emailErr=contactErr=countryErr=genderErr=true;
+        if(name=="")
+        {
+            printError("nameErr","PLEASE ENTER YOUR NAME");
+        }
+        else
+        {
+          var regex= /^[a-zA-Z\s]+$/;
+          if(regex.test(name)===false)
+          {
+            printError("nameErr","PLEASE ENTER VALID NAME");
+          }
+          else
+          {
+            printError("nameErr","");
+            nameErr=false;
+          }
+        }
+        if(email=="")
+        {
+            printError("emailErr","PLEASE ENTER YOUR EMAIL");
+        }
+        else
+        {
+          var regex=/^\S+@\S+\.\S+$/;  
+          
+          if(regex.test(email)===false)
+          {
+            printError("emailErr","PLEASE ENTER VALID EMAIL-ID");
+          }
+          else
+          {
+            printError("emailErr","");
+            emailErr=false;
+          }
+        }
+        if(contact=="")
+        {
+            printError("contactErr","PLEASE ENTER YOUR PHONE NUMBER");
+        }
+        else
+        {
+          var regex=/^[1-9]\d{9}$/;  
+          
+          if(regex.test(contact)===false)
+          {
+            printError("contactErr","PLEASE ENTER VALID PHONE NUMBER");
+          }
+          else
+          {
+            printError("contactErr","");
+            contactErr=false;
+          }
+        }
+        if(country=="Select")
+        {
+            printError("countryErr","PLEASE SELECT YOUR COUNTRY");
+        }
+        else
+        {
+            printError("countryErr",""); 
+            countyErr=false;
+        }
+       if(gender=="") 
+       {
+        printError("genderErr","PLEASE SELECT YOUR GENDER");
+       }  
+       else
+       {
+        printError("genderErr",""); 
+        genderErr=false;
+       }
+
+       if((nameErr || emailErr || contactErr || genderErr || countryErr) == true ){
+             return false;
+       }
+       else{
+             var data ="You' ve enter a details" + "\n" +
+                        "Full name" + name + "\n" + 
+                        "Email " + email + "\n" +
+                        "mobile_no" + contact + "\n" +
+                        "country" + country + "\n" +
+                        "gender" +gender ;
+       }
+       alert(data);
+
+      //  if((nameErr || emailErr || contactErr || countryErr || genderErr) == true)
+      //   {
+      //     return false;
+      //   }
+      //  else
+      //  {
+      //     var data="You've entered the following details: \n" +
+      //                              "Full Name: " + name + "\n" +
+      //                              "Email Address: " + email + "\n" +
+      //                              "Mobile Number: " + contact + "\n" +
+      //                              "Country: " + country + "\n" +
+      //                              "Gender: " + gender + "\n";
+                                   
+      //  }
+      //  alert(data);
+    };
+     
+    </script>
+</head>
+<body>
+   <form name="contactForm" onsubmit="return validateForm()" method="post">
+    <h2>CONTACT FORM</h2>
+
+    <div class="row">
+        <label >FULL NAME</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label >EMAIL ID</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label >PHONE NUMBER</label>
+        <input type="text" name="contact" maxlength="10">
+        <div class="error" id="contactErr"></div>
+    </div>
+    <div class="row">
+        <label >COUNTRY</label>
+        <select name="country" >
+            <option>Select</option>
+                     <option>Australia</option>
+                     <option>India</option>
+                     <option>United States</option>
+                     <option>U.A.E.</option>
+                     <option>France</option>
+                     <option>Canada</option>
+                     <option>Bhutan</option>
+
+        </select>
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label >GENDER</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+         <label><input type="radio" name="gender" value="female"> Female</label>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+    <input type="submit" value="SUBMIT">
+    </div>
+    </form>
+</body>
+</html>

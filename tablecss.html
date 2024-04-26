@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,td{
+        /* here the border comes in double layer */
+        border:4px ridge palevioletred;
+        /* so we use collapse */
+       border-collapse: collapse;
+    }
+    /* this is for coloring row wise */
+    tr:nth-child(odd)
+    {
+        background-color: lightgrey;
+    }
+    tr:nth-child(even)
+    {
+        background-color: lightgoldenrodyellow;
+    }
+/* this is for coloring column wise it overlapse the above color  */
+td:nth-child(odd)
+    {
+        background-color: lightsalmon;
+    }
+    td:nth-child(even)
+    {
+        background-color: lightseagreen;
+    }
+    /* this is for coloring headings */
+    th:nth-child(odd)
+    {
+        background-color: lightpink;
+    }
+    th:nth-child(even)
+    {
+        background-color: lightblue;
+    }
+    /* hover effect */
+    thead:nth-child(odd):hover
+    {
+        background-color: darkorchid;
+    }
+    td:nth-child(even):hover
+    {
+        background-color:darkmagenta
+    }
+    th:nth-child(odd):hover
+    {
+        background-color: darkred;
+    }
+    th:nth-child(even):hover
+    {
+        background-color:darkgreen;
+    }
+table :hover{
+    width:100%;
+    text-align: center;
+    /* for proper and equal shadow we write  0px on the two starting sides */
+    box-shadow: 0px 0px 5px 7px deeppink;
+}
+</style>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+           <TH>NAME</TH>
+           <TH>GENDER</TH>
+           <TH>AGE</TH>
+           <TH>PHONE NUMBER</TH>
+           <TH>EMAIL ID</TH>
+           <TH>GRADE</TH>
+        </tr>
+        <TR>
+            <td>1</td>
+            <td>Prachi</td>
+            <td>female</td> 
+            <td>19</td> 
+            <td>6380374502</td>
+            <td>prachi@gmail.com</td>
+            <td>A+</td>        
+           
+        </TR>
+        <TR>
+            <td>2</td>
+            <td>Archi</td>
+            <td>female</td> 
+            <td>19</td> 
+            <td>636373809</td>
+            <td>archi@gmail.com</td>
+            <td>A</td>        
+           
+        </TR>
+        <TR>
+            <td>3</td>
+            <td>Neel</td>
+            <td>male</td> 
+            <td>18</td> 
+            <td>737829292</td>
+            <td>neel@gmail.com</td>
+            <td>B</td>        
+           
+        </TR>
+        <TR>
+            <td>4</td>
+            <td>Akshat</td>
+            <td>male</td> 
+            <td>18</td> 
+            <td>728274502</td>
+            <td>aksh@gmail.com</td>
+            <td>B</td>        
+           
+        </TR>
+        <TR>
+            <td>5</td>
+            <td>Rajan</td>
+            <td>male</td> 
+            <td>21</td> 
+            <td>98918272</td>
+            <td>rajan@gmail.com</td>
+            <td>A+</td>        
+           
+        </TR>
+        <TR>
+            <td>6</td>
+            <td>Kathan</td>
+            <td>male</td> 
+            <td>18</td> 
+            <td>7292920282</td>
+            <td>kathan@gmail.com</td>
+            <td>B</td>        
+           
+        </TR>
+        <TR>
+            <td>7</td>
+            <td>Dev</td>
+            <td>male</td> 
+            <td>20</td> 
+            <td>239873822</td>
+            <td>dev@gmail.com</td>
+            <td>C</td>        
+           
+        </TR>
+        <TR>
+            <td>8</td>
+            <td>megha</td>
+            <td>female</td> 
+            <td>17</td> 
+            <td>7876231912</td>
+            <td>megha@gmail.com</td>
+            <td>C</td>        
+           
+        </TR>
+        <TR>
+            <td>9</td>
+            <td>Dhruvi</td>
+            <td>female</td> 
+            <td>22</td> 
+            <td>92724502</td>
+            <td>dhruvi@gmail.com</td>
+            <td>B</td>        
+           
+        </TR>
+        <TR>
+            <td>10</td>
+            <td>Neha</td>
+            <td>female</td> 
+            <td>19</td> 
+            <td>6171994502</td>
+            <td>nehu@gmail.com</td>
+            <td>A</td>        
+           
+        </TR>
+           
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           animation-name: box;
+           animation-duration: 5s;
+           animation-iteration-count: infinite;/*infinite,value*/
+
+        }
+        @keyframes box{
+            0%{
+                background-color: lightgrey;
+            }
+            25%{
+                background-color: lightsalmon;
+            }
+            50%{
+                background-color: lightpink;
+            }
+            75%{
+                background-color: palevioletred;
+            }
+            100%{
+                background-color: sandybrown;
+            }
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            animation-name: box2;
+            animation-duration: 4s;
+            position: absolute;
+           /* animation-fill-mode:forwards*/ /*FORWARDS,BACKWARDS*/
+           /*animation-direction: alternate-reverse;/*alternate,alternate-reverse*/
+           animation-timing-function: ease-in-out;/*ease,liner,ease-in-out,ease-in,ease-out*/
+           animation-iteration-count: 5;
+
+
+        }
+        @keyframes box2{
+            0%{
+                top:0;
+                left:0;
+            }
+            100%
+            {
+                top: 200px;
+                left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <p></p> 
+</body>
+</html>
